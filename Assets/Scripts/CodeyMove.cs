@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 public class CodeyMove : MonoBehaviour
 {
-    public float Speed = 80f;
+    public float Speed = 2000f;
     Animator anim;
     public bool running = true;
     public bool canMove = true;
     public Vector3 move;
-    public float _rotationSpeed = 50f;
+    public float _rotationSpeed = 100f;
     private Rigidbody rb;
     //public Transform cart;
     //public Transform ninja;

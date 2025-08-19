@@ -14,7 +14,7 @@ public class EndBlockerRemover : MonoBehaviour
     }
 
    
-    void onTriggerEnter(Collision other)
+    void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Cody")
         {

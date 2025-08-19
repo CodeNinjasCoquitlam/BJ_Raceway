@@ -4,29 +4,41 @@ using UnityEngine;
 
 public class CheckPoints : MonoBehaviour
 {
-   /* public bool didCollide;
-    public GameManager count;
-    public GameObject checkpoint;
+    public GameManager manage;
+    private GameObject NextCheckpoint;
+    public int CurrentCheckpoint;
+    private Vector3 Spawn;
+    private Quaternion SpawnRot;
 
-    // Start is called before the first frame update
+   
     void Start()
     {
-        didCollide = false;
-        GameObject gameManagerTransform = GameObject.FindWithTag("gameManager");
-        gameManager = gameManagerTransform.GetComponent<GameManager>();
+        NextCheckpoint = manage.checkpointArray[0];
     }
-
-    // Update is called once per frame
-    void Update()
+    public void OnTriggerEnter(Collider other)   
     {
         
-    }*/
-   public void onTriggerEnter(Collider other)
-    {
-        if (other.gameObject.tag == "Cody")
+        if (other.gameObject.tag == "checkpoints")
         {
-            Destroy(this);
+            if (other.gameObject == NextCheckpoint)
+            {
+                Spawn = NextCheckpoint.transform.position;
+                SpawnRot = this.transform.rotation;
+                CurrentCheckpoint++;
+                NextCheckpoint = manage.checkpointArray[CurrentCheckpoint];
+                Destroy(other.gameObject);
+            } else
+            {
+                CodyReset();
+            }
+            
+            
         }
+    }
+    public void CodyReset()
+    {
+        this.transform.position = Spawn;
+        this.transform.rotation = SpawnRot;
     }
 }
 

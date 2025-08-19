@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public CheckPoints[] checkpointArray;
+    public GameObject[] checkpointArray;
     public int numOfCheckpoints;
     public int triggeredCheckPoints;
     
