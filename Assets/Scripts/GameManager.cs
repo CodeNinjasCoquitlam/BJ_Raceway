@@ -13,16 +13,7 @@ public class GameManager : MonoBehaviour
     {
         numOfCheckpoints = GameObject.FindGameObjectsWithTag("checkpoints").Length;
 
-/*        if (player & CheckPoints overlaps) {
-            int checkpoIndexint = Array.IndexOf(checkpointArray, currentCheckpoint);
-            if (checkpointIndex == playerscurrentcheckpointint)
-            {
-                playerscurrentcheckpointint += 1;
-            } else
-            {
-                //checkpoint isnt in order
-            }
-        }*/
+
     }
     
     // Update is called once per frame

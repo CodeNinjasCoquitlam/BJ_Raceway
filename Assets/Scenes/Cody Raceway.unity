@@ -9617,7 +9617,6 @@ GameObject:
   - component: {fileID: 1152028615}
   - component: {fileID: 1152028614}
   - component: {fileID: 1152028613}
-  - component: {fileID: 1152028617}
   m_Layer: 0
   m_Name: Finish
   m_TagString: Finish
@@ -9703,19 +9702,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1152028617
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1152028612}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3765e3543d88aec468f4ceef8895a159, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  check: {fileID: 0}
 --- !u!1 &1161057820 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4689709987394344508, guid: 1c8dceda4e8f06348a93e677041a4c1e, type: 3}
@@ -10508,6 +10494,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   manage: {fileID: 391771729}
   CurrentCheckpoint: 0
+--- !u!114 &1249026497
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1249026478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3765e3543d88aec468f4ceef8895a159, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  check: {fileID: 1249026491}
+  WenScren: {fileID: 1649328757}
 --- !u!1001 &1252767207
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10651,8 +10651,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 43.843994, y: 21.921997}
-  m_SizeDelta: {x: 247.688, y: 73.844}
+  m_AnchoredPosition: {x: 82.7, y: 65.354}
+  m_SizeDelta: {x: 567.3044, y: 73.844}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1261737377
 MonoBehaviour:
@@ -10687,7 +10687,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'U diad lel
+  m_Text: 'Ur is WINNER!!!!11!
 
 '
 --- !u!222 &1261737378
@@ -14434,7 +14434,7 @@ GameObject:
   - component: {fileID: 1649328759}
   - component: {fileID: 1649328761}
   m_Layer: 5
-  m_Name: DedScreen
+  m_Name: WenScreen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14475,7 +14475,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.9677757, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -17188,7 +17188,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 30
+    m_FontSize: 36
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
@@ -17199,7 +17199,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: TRI AGAN
+  m_Text: plAi Agyyan
 --- !u!222 &1956259631
 CanvasRenderer:
   m_ObjectHideFlags: 0

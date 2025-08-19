@@ -25,7 +25,11 @@ public class CheckPoints : MonoBehaviour
                 Spawn = NextCheckpoint.transform.position;
                 SpawnRot = this.transform.rotation;
                 CurrentCheckpoint++;
-                NextCheckpoint = manage.checkpointArray[CurrentCheckpoint];
+                if (CurrentCheckpoint < 26)
+                {
+                    NextCheckpoint = manage.checkpointArray[CurrentCheckpoint];
+                }
+                
                 Destroy(other.gameObject);
             } else
             {
