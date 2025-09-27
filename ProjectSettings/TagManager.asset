@@ -8,6 +8,7 @@ TagManager:
   - DIE
   - checkpoints
   - Obstacle
+  - itemBoxes
   layers:
   - Default
   - TransparentFX

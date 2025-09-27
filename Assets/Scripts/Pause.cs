@@ -6,6 +6,7 @@ public class Pause : MonoBehaviour
 {
     public bool pausemenushowing;
     public GameObject PauseMenuObject;
+    public FinishLine finishScripy;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,10 +20,12 @@ public class Pause : MonoBehaviour
         if (pausemenushowing == true)
         {
             Time.timeScale = 0;
+            finishScripy.HideUi();
         }
         if (pausemenushowing == false)
         {
             Time.timeScale = 1;
+            finishScripy.ShowUi();
         }
 
         if (Input.GetKeyDown(KeyCode.J) && pausemenushowing == false)
