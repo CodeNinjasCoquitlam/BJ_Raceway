@@ -31,6 +31,7 @@ public class Timers : MonoBehaviour
         BestTimeObject.SetActive(false);
         TimeUntilCodeyExplodesObject.SetActive(false);
         CountDownTillStartObject.SetActive(true);
+        
     }
 
     // Update is called once per frame
@@ -62,7 +63,7 @@ public class Timers : MonoBehaviour
                 totalUrTime += Time.deltaTime;
                 movescripy.Speed = 2000;
 
-                totalTimeUntilCodeyExplodes -= Time.deltaTime;
+                totalTimeUntilCodeyExplodes -= Time.deltaTime; 
 
                 UrTime.text = ("Your Time:" + totalUrTime.ToString());
                 TimeUntilCodeyExplodes.text = Mathf.Round(totalTimeUntilCodeyExplodes).ToString();

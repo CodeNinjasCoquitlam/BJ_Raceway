@@ -66,8 +66,8 @@ public class CheckPoints : MonoBehaviour
             this.transform.position = Spawn;
             this.transform.rotation = SpawnRot;
         }
-        timyscripy.totalUrTime += 5;
-        timyscripy.totalTimeUntilCodeyExplodes -= 5;
+        /*timyscripy.totalUrTime += 5;
+        timyscripy.totalTimeUntilCodeyExplodes -= 5;*/
     }
     public void CodyDYE()
     {

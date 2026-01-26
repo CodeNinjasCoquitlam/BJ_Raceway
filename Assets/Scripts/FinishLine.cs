@@ -34,6 +34,16 @@ public class FinishLine : MonoBehaviour
         BestTime.text = ("Best Time:" + sinkytimerscripy.totalBestTime.ToString());
 
     }
+    public void Update()
+    {
+        if (GameOn ==  false)
+        {
+            Time.timeScale = 0;
+        } else
+        {
+            Time.timeScale = 1;
+        }
+    }
     public void HideUi()
     {
         GameOn = false;
