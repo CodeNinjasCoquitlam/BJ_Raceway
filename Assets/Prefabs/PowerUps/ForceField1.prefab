@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 7860167122949411842}
   - component: {fileID: 5818475815362262885}
   m_Layer: 0
-  m_Name: ForceField 1
-  m_TagString: Untagged
+  m_Name: ForceField1
+  m_TagString: Force
   m_Icon: {fileID: 8418204508859773708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -45,6 +45,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad23f73d1ef3367479cd84847e9de9f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Forcefieldactive: 0
+  PowerupTime: 10
 --- !u!1001 &3418205965988428519
 PrefabInstance:
   m_ObjectHideFlags: 0

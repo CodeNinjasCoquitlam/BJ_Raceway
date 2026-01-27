@@ -1,39 +1,54 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class ForceFieldPowerup : MonoBehaviour
 {
     private GameObject Cody;
     public bool Forcefieldactive = false;
-    public SelectRandomPowerUp powerupscrippy;
+    private SelectRandomPowerUp powerupscrippy;
+    private CodyIsAGamerAndDIESifHetouchesGrass grass;
 
-    // Start is called before the first frame update
+    public float PowerupTime = 10f;
+
+    // Start is called before the first frame updateasd
     void Start()
     {
         Cody = GameObject.FindGameObjectWithTag("Cody");
+        powerupscrippy = Cody.GetComponent<SelectRandomPowerUp>();
+        grass = Cody.GetComponent<CodyIsAGamerAndDIESifHetouchesGrass>();
     }
 
-    // Update is called once per frame
-    void Update()
+    // Update is called once per fram
+    private void Update()
     {
-        this.gameObject.transform.position = Cody.transform.position;
+        this.gameObject.transform.position = Cody.transform.position + new Vector3(0, 1.3f, 0);
+
         if (powerupscrippy.forcefieldactivated == true) 
         {
             Forcefieldactive = true;
+            grass.ForceFieldActiveAgain = true;
+            
         }
         if (Forcefieldactive == true)
         {
-            //add timer count down from 10 seconeds that when done deletes forcefield
-            Forcefieldactive = false
+            StartCoroutine(WaitAndRun());
         }
     }
-    public void OnTriggerEnter(Collider collision)
+    
+
+    private System.Collections.IEnumerator WaitAndRun()
     {
-        if (collision.gameObject.tag == "Obstacle")
-        {
-            Destroy(collision.gameObject);
-            Destroy(this.gameObject);
-        }
+        yield return new WaitForSeconds(PowerupTime);
+        Timer();
+    }
+
+    private void Timer()
+    {
+        Forcefieldactive = false;
+        grass.ForceFieldActiveAgain = false;
+        Destroy(this.gameObject);
+        powerupscrippy.forcefieldactivated = false;
     }
 }

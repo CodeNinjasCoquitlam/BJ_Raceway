@@ -9,6 +9,8 @@ TagManager:
   - checkpoints
   - Obstacle
   - itemBoxes
+  - Fire
+  - Force
   layers:
   - Default
   - TransparentFX

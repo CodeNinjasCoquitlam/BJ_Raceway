@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 public class SelectRandomPowerUp : MonoBehaviour
@@ -15,20 +16,32 @@ public class SelectRandomPowerUp : MonoBehaviour
     {
         
     }
-
+    
+    
+    //3 only 1 force field in a game at a ti    
     
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space) && chosenPowerUp != null ) 
         {
-            Instantiate(chosenPowerUp, transform.position + transform.forward *1.5f,transform.rotation);
-            if ( randomNumberInList == 2 ) 
-            { 
-                forcefieldactivated = true;
+            if (randomNumberInList < 2)
+            {
+                Instantiate(chosenPowerUp, transform.position + transform.forward * 1.5f, transform.rotation);
+                chosenPowerUp = null;
             }
-            chosenPowerUp = null;
-            forcefieldactivated = false;
 
+            if (forcefieldactivated == false && randomNumberInList == 2)
+            {
+                Instantiate(chosenPowerUp, transform.position + transform.forward * 1.5f, transform.rotation);
+                Debug.Log(chosenPowerUp.ToString());
+
+                if (chosenPowerUp.ToString() == "ForceField1 (UnityEngine.GameObject)")
+                {
+                    forcefieldactivated = true;
+                }
+                chosenPowerUp = null;
+
+            }
         }
     }
 
